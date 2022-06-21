@@ -2,22 +2,25 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  let dateCourante = new Date();
+  let tempsJavascript = dateCourante.getTime();
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Temps JavaScript: {tempsJavascript} milliseconde
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          Temps PHP: {tempsJavascript/1000} secondes
+        </p>
+        <p>
+          Date pour un humain: {dateCourante.getDate()}/{dateCourante.getMonth()}/{dateCourante.getFullYear()}
+        </p>
       </header>
+      <footer>Un site de Molengeek</footer>
     </div>
   );
 }
